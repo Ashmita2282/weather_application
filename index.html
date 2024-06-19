@@ -18,7 +18,87 @@
 </head>
 
 <body>
-    <div></div>
+    <div class="flex flex-col text-center text-4xl font-bold bg-black text-white">
+        <div>
+            <div class="flex justify-between items-center h-full text-[#d6a5a5] flex-row bg-black">
+                <div class="p-5 bg-primary flex justify-between">
+                    <h1 class=" text-4xl font-bold hover:blur-lg brightness-125 ...">
+                        Weather AP
+                    </h1>
+                    <h1 class="text-[#fbf8f8] text-4xl font-bold ">p</h1>
+                    <h1 class="text-tertiary text-4xl font-bold  hover:blur-lg brightness-125 ... ">
+                        🌤️
+                    </h1>
+                </div>
+                <div class="flex gap-8 flex-row text-xl font-semibold">
+                    <div class="p-2 mb-3 sm:mb-4 sm:mt-2 w-[25%] flex justify-center">
+                        <a class="p-3 rounded-l-lg bg-slate-700  hover:bg-black shadow-sm shadow-slate-100"><i
+                                class="fa-regular fa-moon text-xl hover:text-black"></i></a>
+                        <a class="p-3 rounded-r-lg  hover:bg-slate-700 shadow-sm shadow-slate-100"><i
+                                class="fa-regular fa-sun  text-xl hover:text-black"></i></a>
+                    </div>
+                    <div class="p-2 sm:mb-4 sm:mt-2 w-[25%] flex justify-center">
+                        <a class="p-3 rounded-l-lg bg-slate-700  shadow-sm shadow-slate-100"><i
+                                class="fa-solid fa-user-plus text-xl hover:text-black"></i></a>
+                        <a
+                            class="p-3 rounded-r-lg hover:bg-slate-700 shadow-sm shadow-slate-100  text-xl hover:text-black"><i
+                                class="fa-solid fa-right-from-bracket text-xl hover:text-black"></i></a>
+                    </div>
+                    <a href="/">About Us</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="w-full flex flex-row h-[500px] bg-[#191616]">
+                <div class="flex flex-col w-[40%]">
+                    <div class="m-3 p-3 shadow-md shadow-[#64505066] h-[100%]">
+                        <div class="flex flex-col">
+                            <div class="flex flex-row justify-between">
+                                <h6 class="text-3xl font-semibold text-white">Weather </h6>
+                            </div>
+                            <div class="flex flex-col mt-5">
+                                <input type="text" id="cityInput"
+                                    class="border bg-black text-white rounded-md px-3 py-1 shadow-md shadow-[#c3bdbd66] text-2xl font-semibold"
+                                    placeholder="Enter city name" />
+                                <button id="searchButton"
+                                    class="bg-red-900 shadow-md shadow-[#c3bdbd66] text-white mt-5 mb-5 px-3 py-1 rounded-md text-2xl font-semibold">
+                                    Search
+                                </button>
+                                <hr>
+                                <p class="font-sm text-xl">or</p>
+                                <hr>
+                                <button id="locationButton"
+                                    class="bg-[#511d1d] shadow-md shadow-[#c3bdbd66] text-white mt-5 px-3 py-1 rounded-md text-2xl font-semibold">
+                                    Use Current Location
+                                </button>
+                                <div id="recentSearches" class="mt-5">
+                                    <!-- Dropdown for recent searches will be populated here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-3 p-3 shadow-lg w-[60%] justify-center">
+                    <div class="flex flex-col justify-center ">
+                        <div class="flex flex-col item-center">
+                            <h6 class="text-3xl font-bold p-5 w-full text-center text-[#d6a5a5] brightness-125">
+                                Weather Details 🌤️
+                            </h6>
+                            <div id="weatherDetails" class="flex flex-row text-white text-2xl font-semibold">
+                                "Step into Weather Wonderland! Ready for a weather adventure? Enter a city, hit
+                                'Search,' and let the magic happen! Your instant ticket to meteorological marvels
+                                awaits. 🌦️✨"
+                            </div>
+                            <div id="forecastDetails" class="flex flex-row text-white text-2xl font-semibold mt-5">
+                                <!-- Extended forecast will be populated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/710919bc1f.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 
