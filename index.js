@@ -1,4 +1,6 @@
 const getInputData = document.getElementById("searchButton");
+
+// API Key
 const API_URL = "2806c8f223266044603bdc8e864e6cad";
 
 getInputData.addEventListener("click", function () {
@@ -43,7 +45,7 @@ function getWeatherData(inputCity) {
     });
 }
 
-// Function to display weather data on the page
+// Function to display weather data by city name on the page
 function displayWeatherData(data) {
   const weatherDetails = document.getElementById("weatherDetails"); // Get the weather details element
   if (data.cod === 200) {
@@ -74,7 +76,7 @@ function displayWeatherData(data) {
   }
 }
 
-// Function to fetch extended forecast data
+// Function to fetch extended forecast 5 day's data
 function getExtendedForecast(lat, lon) {
   const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_URL}`; // API URL for extended forecast
   fetch(url)
@@ -123,6 +125,7 @@ function displayExtendedForecast(data) {
   }
 }
 
+// Function to fetch data by current location
 const currentlocationButton = document.getElementById("locationButton");
 
 // Add event listener to the location button
