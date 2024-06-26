@@ -18,86 +18,149 @@
 </head>
 
 <body>
-    <div class="flex flex-col text-center text-4xl font-bold bg-black text-white">
-        <div>
-            <div class="flex justify-between items-center h-full text-[#d6a5a5] flex-row bg-black">
-                <div class="p-5 bg-primary flex justify-between">
-                    <h1 class=" text-4xl font-bold hover:blur-lg brightness-125 ...">
-                        Weather AP
-                    </h1>
-                    <h1 class="text-[#fbf8f8] text-4xl font-bold ">p</h1>
-                    <h1 class="text-tertiary text-4xl font-bold  hover:blur-lg brightness-125 ... ">
-                        🌤️
-                    </h1>
+    <div class="flex flex-col text-center text-4xl font-bold bg-black text-white font-serif">
+        <!-- Header Part -->
+        <header class="flex justify-between items-center h-full text-[#d6a5a5] flex-row bg-black">
+            <div class="p-5 bg-primary flex justify-between">
+                <h1 class=" text-4xl font-bold hover:blur-lg brightness-125 ...">
+                    Weather AP
+                </h1>
+                <h1 class="text-[#fbf8f8] text-4xl font-bold ">p</h1>
+                <h1 class="text-tertiary text-4xl font-bold  hover:blur-lg brightness-125 ... ">
+                    🌤️
+                </h1>
+            </div>
+            <div class="gap-8 flex-row text-xl font-semibold hidden md:flex">
+
+                <div class="p-2 sm:mb-4 sm:mt-2 w-[25%] flex justify-center">
+                    <a class="p-3 rounded-l-lg bg-slate-700  shadow-sm shadow-slate-100" href="#footer"><i
+                            class="fa-solid fa-user-plus text-xl hover:text-black"></i></a>
+                    <a class="p-3 rounded-r-lg hover:bg-slate-700 shadow-sm shadow-slate-100  text-xl hover:text-black"
+                        href="#footer"><i class="fa-solid fa-right-from-bracket text-xl hover:text-black"></i></a>
                 </div>
-                <div class="flex gap-8 flex-row text-xl font-semibold">
-                    <div class="p-2 mb-3 sm:mb-4 sm:mt-2 w-[25%] flex justify-center">
-                        <a class="p-3 rounded-l-lg bg-slate-700  hover:bg-black shadow-sm shadow-slate-100"><i
-                                class="fa-regular fa-moon text-xl hover:text-black"></i></a>
-                        <a class="p-3 rounded-r-lg  hover:bg-slate-700 shadow-sm shadow-slate-100"><i
-                                class="fa-regular fa-sun  text-xl hover:text-black"></i></a>
-                    </div>
-                    <div class="p-2 sm:mb-4 sm:mt-2 w-[25%] flex justify-center">
-                        <a class="p-3 rounded-l-lg bg-slate-700  shadow-sm shadow-slate-100"><i
-                                class="fa-solid fa-user-plus text-xl hover:text-black"></i></a>
-                        <a
-                            class="p-3 rounded-r-lg hover:bg-slate-700 shadow-sm shadow-slate-100  text-xl hover:text-black"><i
-                                class="fa-solid fa-right-from-bracket text-xl hover:text-black"></i></a>
-                    </div>
-                    <a href="/">About Us</a>
+                <div class="p-2 mb-3 sm:mb-4 sm:mt-2 w-[25%] flex justify-center">
+                    <a class="p-3 rounded-lg hover:bg-slate-700 bg-black shadow-sm shadow-slate-100"
+                        href="https://github.com/Ashmita2282?tab=repositories"><i
+                            class="fa-brands fa-github fa-xl text-xl hover:text-black"></i></a>
                 </div>
             </div>
-        </div>
-        <div>
-            <div class="w-full flex flex-row h-[500px] bg-[#191616]">
-                <div class="flex flex-col w-[40%]">
-                    <div class="m-3 p-3 shadow-md shadow-[#64505066] h-[100%]">
-                        <div class="flex flex-col">
-                            <div class="flex flex-row justify-between">
-                                <h6 class="text-3xl font-semibold text-white">Weather </h6>
-                            </div>
-                            <div class="flex flex-col mt-5">
-                                <input type="text" id="cityInput"
-                                    class="border bg-black text-white rounded-md px-3 py-1 shadow-md shadow-[#c3bdbd66] text-2xl font-semibold"
-                                    placeholder="Enter city name" />
-                                <button id="searchButton"
-                                    class="bg-red-900 shadow-md shadow-[#c3bdbd66] text-white mt-5 mb-5 px-3 py-1 rounded-md text-2xl font-semibold">
-                                    Search
-                                </button>
-                                <hr>
-                                <p class="font-sm text-xl">or</p>
-                                <hr>
-                                <button id="locationButton"
-                                    class="bg-[#511d1d] shadow-md shadow-[#c3bdbd66] text-white mt-5 px-3 py-1 rounded-md text-2xl font-semibold">
-                                    Use Current Location
-                                </button>
-                                <div id="recentSearches" class="mt-5">
-                                    <!-- Dropdown for recent searches will be populated here -->
-                                </div>
-                            </div>
+        </header>
+        <!-- Main div content  -->
+        <main class="w-full flex flex-col sm:flex-row bg-[#191616]">
+            <section class="flex flex-col w-full sm:w-[40%] m-3 p-3 shadow-md shadow-[#64505066] h-[100%]">
+                <div class="flex flex-col">
+                    <!-- Title div -->
+                    <div class="flex flex-row justify-between">
+                        <h6 class="text-3xl font-semibold text-white">Weather </h6>
+                    </div>
+                    <div class="flex flex-col mt-5">
+                        <!-- city input field -->
+                        <input type="text" id="cityInput"
+                            class="border-2 bg-red-200 text-white rounded-md px-3 py-1 shadow-md shadow-[#c3bdbd66] border-2 text-2xl font-bold font-serif"
+                            placeholder="Eg. Jaipur , Goa etc" />
+                        <!-- Search button -->
+                        <button id="searchButton"
+                            class="bg-red-200 shadow-lg border-2 shadow-[#c3bdbd66] text-white mt-5 mb-5 px-3 py-1 rounded-md text-2xl font-bold font-serif">
+                            Search
+                        </button>
+                        <hr>
+                        <p class="font-sm text-xl">or</p>
+                        <hr>
+                        <!-- Button for current location                                 -->
+                        <button id="locationButton"
+                            class="bg-red-200 shadow-md shadow-[#c3bdbd66] text-white mt-5 px-3 py-1 rounded-md text-2xl font-bold font-serif">
+                            Use Current Location
+                        </button>
+                        <!-- DropDown -->
+                        <div id="recentSearches"
+                            class="mt-5 bg-red-300 border-2 shadow-md shadow-[#c3bdbd66] font-bold font-serif text-white mt-5 mb-5 px-3 py-1 rounded-md text-2xl">
+                            <!-- Dropdown for recent searches will be populated here -->
+                        </div>
+                    </div>
+                    <div class="flex justify-center hidden lottie-pic">
+                        <dotlottie-player src="https://lottie.host/8e7099d8-4f19-4607-86d2-0055e4e9d7d0/3Zr74iUxxM.json"
+                            background="transparent" speed="1" autoplay loop
+                            class="p-2 h-[60] mt-7 rounded shadow-lg transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110  duration-300"></dotlottie-player>
+                    </div>
+                </div>
+            </section>
+            <section class="m-3 p-3 shadow-lg w-full sm:w-[60%]">
+                <div class="w-full">
+                    <h6 class="text-3xl font-bold p-5 pt-0 w-full text-center text-[#d6a5a5] brightness-125">
+                        Weather Details 🌤️
+                    </h6>
+                    <div id="weatherDetails" class="text-white text-2xl font-semibold w-full">
+                        "Step into Weather Wonderland! Ready for a weather adventure? Enter a city, hit
+                        'Search,' and let the magic happen! Your instant ticket to meteorological marvels
+                        awaits. 🌦️✨"
+                    </div>
+                    <div id="forecastDetails"
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 text-white text-2xl font-semibold mt-5 h-full">
+                        <!-- Extended forecast will be populated here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="flex justify-center items-center bg-[#191616]">
+            <div class="flex flex-col sm:flex-row bg-[#191616] w-[80%] mt-10 rounded-tl-2xl rounded-tr-2xl pl-6 shadow-lg shadow-slate-100"
+                id="footer">
+                <div class="text-white font-semibold gap-10 p-3 m-4 w-[40%]">
+                    <h1 class="text-2xl font-bold font-serif">Get in touch</h1>
+                    <p class=" font-serif text-lg font-semi-bold">Copyright @ 2024 | All rights reserved.
+                    </p>
+                    <div class="text-center flex justify-center items-center mt-3">
+                        <div
+                            class="hover:shadow-lg hover:shadow-slate-100  transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110  duration-300">
+                            <a href="https://www.linkedin.com/in/ashmita-shrivas-566265202"
+                                class="border-1 p-1  rounded-lg mr-2 hover: shadow-sm shadow-slate-100"><i
+                                    class="fa-brands fa-linkedin  text-xl"></i></a>
+                        </div>
+
+                        <div
+                            class="hover:shadow-lg hover:shadow-slate-100  transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110  duration-300">
+                            <a class="border-1 p-1 mr-2  rounded-lg  hover: shadow-sm shadow-slate-100"
+                                href="https://wa.me/918602941865">
+                                <i class="fa-brands fa-whatsapp  text-xl"></i></a>
+                        </div>
+                        <div
+                            class="hover:shadow-lg hover:shadow-slate-100  transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110  duration-300">
+                            <a href="mailto:shrivasashmita.com"
+                                class="border-1 p-1  rounded-lg hover: shadow-sm shadow-slate-100"><i
+                                    class="fa-solid fa-square-envelope  text-xl"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="m-3 p-3 shadow-lg w-[60%] justify-center">
-                    <div class="flex flex-col justify-center ">
-                        <div class="flex flex-col item-center">
-                            <h6 class="text-3xl font-bold p-5 w-full text-center text-[#d6a5a5] brightness-125">
-                                Weather Details 🌤️
-                            </h6>
-                            <div id="weatherDetails" class="flex flex-row text-white text-2xl font-semibold">
-                                "Step into Weather Wonderland! Ready for a weather adventure? Enter a city, hit
-                                'Search,' and let the magic happen! Your instant ticket to meteorological marvels
-                                awaits. 🌦️✨"
-                            </div>
-                            <div id="forecastDetails" class="flex flex-row text-white text-2xl font-semibold mt-5">
-                                <!-- Extended forecast will be populated here -->
-                            </div>
+                <div class="flex flex-col sm:flex-row mt-1 m-5 w-40%">
+                    <div
+                        class="relative h-32 w-32 m-7 rounded-tl-xl shadow-lg bg-neutral-900 shadow-slate-100  transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110  duration-300">
+                        <div
+                            class="absolute h-32 w-32 m-5 bg-[#191616] border-1 border-slate-100 shadow-sm shadow-slate-100 rounded-tl-lg rounded-br-xl flex flex-col justify-center items-center ">
+                            <a href="https://drive.google.com/file/d/1W2fJj4s42TA5T8uU9LT6XDOJZ1-lKr2Z/view?usp=sharing"
+                                class="border-2 p-1  rounded-lg mr-2 hover: shadow-sm shadow-slate-100 ">
+                                <i class="fa-solid fa-address-card fa-sm text-sm font-semibold"></i>
+                            </a>
+                            <p class="text-white font-serif text-lg font-semibold">About me </p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-32 w-32 m-7 bg-neutral-900 rounded-tl-xl shadow-lg  shadow-slate-100  transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110  duration-300">
+                        <div
+                            class="absolute h-32 w-32 m-5 bg-[#191616] border-1 border-slate-100 shadow-sm shadow-slate-100 rounded-tl-lg rounded-br-xl flex flex-col justify-center items-center">
+                            <a href="tel:99999999" class="border-2 p-1 rounded-md mr-2  shadow-sm shadow-slate-100 ">
+                                <i class="fa-solid fa-phone-volume fa-sm text-sm font-semibold"></i>
+                            </a>
+                            <p class="text-white font-serif text-lg font-semibold">Contact Me</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
+    <!-- js and font awesome script -->
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
     <script src="https://kit.fontawesome.com/710919bc1f.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
